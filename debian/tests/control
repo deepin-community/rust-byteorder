@@ -1,0 +1,24 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test byteorder 1.4.3 --all-targets --all-features
+Features: test-name=rust-byteorder:@
+Depends: dh-cargo (>= 18), librust-quickcheck-0.9-dev (>= 0.9.2-~~), librust-rand-0.7+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test byteorder 1.4.3 --all-targets 
+Features: test-name=librust-byteorder-dev:default
+Depends: dh-cargo (>= 18), librust-quickcheck-0.9-dev (>= 0.9.2-~~), librust-rand-0.7+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test byteorder 1.4.3 --all-targets --no-default-features --features i128
+Features: test-name=librust-byteorder-dev:i128
+Depends: dh-cargo (>= 18), librust-quickcheck-0.9-dev (>= 0.9.2-~~), librust-rand-0.7+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test byteorder 1.4.3 --all-targets --no-default-features --features std
+Features: test-name=librust-byteorder-dev:std
+Depends: dh-cargo (>= 18), librust-quickcheck-0.9-dev (>= 0.9.2-~~), librust-rand-0.7+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test byteorder 1.4.3 --all-targets --no-default-features
+Features: test-name=librust-byteorder-dev:
+Depends: dh-cargo (>= 18), librust-quickcheck-0.9-dev (>= 0.9.2-~~), librust-rand-0.7+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
